@@ -207,7 +207,7 @@ if st.session_state.user_role is None:
                 st.success("로그인 성공!")
                 st.rerun()
             else:
-                st.error("비밀번호가 올바르지 않습니다. (초기 비밀번호: scs12345)")
+                st.error("비밀번호가 올바르지 않습니다.")
     st.stop()
 
 # 사이드바 역할 전환 및 기본 정보
