@@ -106,7 +106,7 @@ def analyze_application_image(image):
         return {"강좌명": "Gemini API 미설정 (수동 입력 필요)", "수강기간": "미상", "요약": "API 키를 설정해주세요."}
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-3.1-flash-lite')
         prompt = """
         이 이미지는 인강 수강 신청서입니다.
         다음 정보를 JSON 형식으로 추출해 주세요:
@@ -136,7 +136,7 @@ def analyze_note_image(image, grade, subject_full, volume_threshold_str):
         }
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-3.1-flash-lite')
         threshold_num = int(volume_threshold_str.replace("%", ""))
         
         prompt = f"""
